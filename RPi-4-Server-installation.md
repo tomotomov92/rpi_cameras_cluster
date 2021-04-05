@@ -121,6 +121,16 @@ In this tutorial I'll show how to install and configure **OpenVPN** service
 1. 
 
 
-### VII: Install and configure [MotionEye](https://github.com/ccrisan/motioneye)
+### VII: Install [MotionEye](https://github.com/ccrisan/motioneye)
+
+1. 
+
+
+### VIII: Configure [RPi0 W](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md)
+
+Install and configure the Raspberry Pi 0 before configuring the MotionEye software for remote control
+
+
+### IX: Configure MotionEye
 
 1. 
