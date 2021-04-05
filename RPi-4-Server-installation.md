@@ -100,14 +100,27 @@
 
 ### V: Install and configure shared storage
 
+There are 3 available Network Storages:
+- **[Server Message Block](https://en.wikipedia.org/wiki/Server_Message_Block)** - [Guide](https://pimylifeup.com/raspberry-pi-samba/)
+- **[Network File System](https://en.wikipedia.org/wiki/Network_File_System)** - [Guide](https://pimylifeup.com/raspberry-pi-nfs/)
+- **[Apple Filing Protocol](https://en.wikipedia.org/wiki/Apple_Filing_Protocol)** - [Guide](https://pimylifeup.com/raspberry-pi-afp/)
+
+In this tutorial I'll show how to install and configure **Server Message Block (SMB)** on external drive
+
 1. 
 
 
 ### VI: Install and configure VPN
 
+There are 2 easy to use VPN services:
+- **[OpenVPN](https://en.wikipedia.org/wiki/OpenVPN)** - [Guide](https://pimylifeup.com/raspberry-pi-vpn-server/)
+- **[WireGuard](https://en.wikipedia.org/wiki/WireGuard)** - [Guide](https://pimylifeup.com/raspberry-pi-wireguard/)
+
+In this tutorial I'll show how to install and configure **OpenVPN** service
+
 1. 
 
 
-### VII: Install and configure MotionEye
+### VII: Install and configure [MotionEye](https://github.com/ccrisan/motioneye)
 
 1. 

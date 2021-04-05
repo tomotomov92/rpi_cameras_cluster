@@ -18,12 +18,13 @@ In order to accomplish this we're going to use Raspberry Pi 4 for server, Raspbe
 > - Power supply with Micro USB providing at least 5W (5V 1A)
 > - **[Raspberry Pi Camera](https://www.raspberrypi.org/products/camera-module-v2/)** or **[Raspberry Pi Infrared Camera](https://www.raspberrypi.org/products/pi-noir-camera-v2/)**
 > - SD Cards for each Raspberry Pi with at least 16GB storage
+> - SD Card reader
 
 ### Optional
 > - [Case with heatsink](https://erelement.com/raspberry-pi-4/rpi4-al-case-black) for the Raspberry Pi 4
 > - Waterproof case for the Raspberry Pi Zero W if it is going to be outside
 > - [Heatsink](https://erelement.com/mini-pc/rpi-heat-sink) for the Raspberry Pi Zero W CPU
-> - External Hard Drive for storing 
+> - External Hard Drive for storing video files
 
 
 
@@ -36,57 +37,8 @@ In order to accomplish this we're going to use Raspberry Pi 4 for server, Raspbe
 
 
 
-### Installations on Raspberry Pi 4
-
-<details>
-<summary>MotionEye</summary>
-
-#### **[MotionEye](https://github.com/ccrisan/motioneye)** - The purpose of this software is to have centralized plase from where to manage the satelite cameras.
-> - **[Install on Raspberry Pi OS](https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian)** 
-> - **[Using Docker Image](https://github.com/ccrisan/motioneye/wiki/Install-In-Docker)** 
-
-</details>
-
-
-<details>
-<summary>VPN</summary>
-
-##### **[OpenVPN]()**
-> - **[Install on Raspberry Pi OS](https://www.pivpn.io/)** 
-
-##### **[WireGuard]()**
-> - **[Install on Raspberry Pi OS](https://www.pivpn.io/)** 
-> - **[Using Docker Image](https://hub.docker.com/r/linuxserver/wireguard)** 
-
-</details>
-
-
-<details>
-<summary>Network Storage</summary>
-
-##### **[Server Message Block](https://en.wikipedia.org/wiki/Server_Message_Block)**
-> - **[Install on Raspberry Pi OS](https://pimylifeup.com/raspberry-pi-samba/)**
-
-##### **[Network File System](https://en.wikipedia.org/wiki/Network_File_System)**
-> - **[Install on Raspberry Pi OS](https://pimylifeup.com/raspberry-pi-nfs/)**
-
-##### **[Apple Filing Protocol](https://en.wikipedia.org/wiki/Apple_Filing_Protocol)**
-> - **[Install on Raspberry Pi OS](https://pimylifeup.com/raspberry-pi-afp/)**
-
-</details>
-
-## Install variants and how they look like
-
-<details>
-<summary>Install on Raspberry Pi OS</summary>
+## [Raspberry Pi 4](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-4-Server-installation.md) installation
 
 
 
-</details>
-
-<details>
-<summary>Using Docker Images</summary>
-
-
-
-</details>
+## [Raspberry Pi 0](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md) installation

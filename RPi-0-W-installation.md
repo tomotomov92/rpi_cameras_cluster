@@ -93,7 +93,7 @@
 1. Update **File Storage** Storage Device to `Network Share`
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi0/5.1.png)
 
-2. Update **File Storage** Network Server to the IP of the IF of RPi4-Server
+2. Update **File Storage** Network Server to RPi-4-Server
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi0/5.2.png)
 
 3. Update **File Storage** Share Name
