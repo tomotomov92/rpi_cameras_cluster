@@ -197,17 +197,71 @@ There are 2 easy to use VPN services:
 
 In this tutorial I'll show how to install and configure **OpenVPN** service
 
-1. 
+1. Install OpenVPN using the install script from PiVPN.io and follow the [guide](https://pimylifeup.com/raspberry-pi-wireguard/)
+> ```
+> curl -L https://install.pivpn.io | bash
+> ```
+
+2. Create VPN profiles
+> ```
+> pivpn add
+> ```
 
 
-### VII: Install [MotionEye](https://github.com/ccrisan/motioneye)
-
-1. 
-
-
-### VIII: Configure [RPi0 W](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md)
+### VII: Configure [RPi0 W](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md)
 
 Install and configure the Raspberry Pi 0 before configuring the MotionEye software for remote control
+
+
+### VIII: Install [MotionEye](https://github.com/ccrisan/motioneye)
+
+Installing MotionEye using the [guide](https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian)
+
+1. Install `ffmpeg` and other `motion` dependencies
+> ```
+> sudo apt install ffmpeg libmariadb3 libpq5 libmicrohttpd12
+> ```
+
+2. Install `motion`:
+> ```
+> wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
+> sudo dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
+> rm pi_buster_motion_4.2.2-1_armhf.deb
+> ```
+
+3. Install the dependencies from the repositories
+> ```
+> sudo apt install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev
+> ```
+
+4. Install `motioneye`, which will automatically pull Python dependencies (`tornado`, `jinja2`, `pillow` and `pycurl`)
+> ```
+> sudo pip install motioneye
+> ```
+
+5. Prepare the configuration directory
+> ```
+> sudo mkdir -p /etc/motioneye
+> sudo cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf
+> ```
+
+6. Create media directory on the external drive
+> ```
+> sudo mkdir -p /var/lib/motioneye
+> ```
+
+7. Add an init script, configure it to run at startup and start the `motionEye` server
+> ```
+> sudo cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/system/motioneye.service
+> sudo systemctl daemon-reload
+> sudo systemctl enable motioneye
+> sudo systemctl start motioneye
+> ```
+
+8. Create media directory on the external drive
+> ```
+> sudo mkdir -p /media/usb-drive/Cameras
+> ```
 
 
 ### IX: Configure MotionEye
