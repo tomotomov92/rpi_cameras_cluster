@@ -110,7 +110,7 @@
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.7.4.png)
 
 
-### V: Install and configure shared storage
+### IV: Install and configure shared storage
 
 There are 3 available Network Storages:
 - **[Server Message Block](https://en.wikipedia.org/wiki/Server_Message_Block)** - [Guide](https://pimylifeup.com/raspberry-pi-samba/)
@@ -201,7 +201,7 @@ In this tutorial I'll show how to install and configure **Server Message Block (
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.3.3.png)
 
 
-### VI: Install and configure VPN
+### V: Install and configure VPN
 
 There are 2 easy to use VPN services:
 - **[OpenVPN](https://en.wikipedia.org/wiki/OpenVPN)** - [Guide](https://pimylifeup.com/raspberry-pi-vpn-server/)
@@ -220,12 +220,12 @@ In this tutorial I'll show how to install and configure **OpenVPN** service
 > ```
 
 
-### VII: Configure [RPi0 W](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md)
+### VI: Configure [RPi0 W](https://github.com/tomotomov92/rpi_cameras_cluster/blob/main/RPi-0-W-installation.md)
 
 Install and configure the Raspberry Pi 0 before configuring the MotionEye software for remote control
 
 
-### VIII: Install [MotionEye](https://github.com/ccrisan/motioneye)
+### VII: Install [MotionEye](https://github.com/ccrisan/motioneye)
 
 Installing MotionEye using the [guide](https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian)
 
@@ -276,7 +276,7 @@ Installing MotionEye using the [guide](https://github.com/ccrisan/motioneye/wiki
 > ```
 
 
-### IX: Configure MotionEye
+### VIII: Configure MotionEye
 
 Open the MotionEye software on the RPi4 IP and port 8765. Example: `192.168.0.2:8765`
 
