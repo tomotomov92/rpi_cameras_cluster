@@ -107,7 +107,86 @@ There are 3 available Network Storages:
 
 In this tutorial I'll show how to install and configure **Server Message Block (SMB)** on external drive
 
-1. 
+1. Install Samba on Raspberry Pi 4
+> ```
+> sudo apt-get install samba samba-common-bin
+> ```
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.1.png)
+
+2. Mount external drive permanently on the Raspberry Pi 4
+	2.1. Checking connected drives
+	> ```
+	> sudo fdisk -l
+	> ```
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.1.1.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.1.2.png)
+
+	2.2. Creating directory to which we can mount the USB Drive and showing the created directory
+	> ```
+	> sudo mkdir /media/usb-drive
+	> ls -l /media
+	> ```
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.2.1.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.2.2.png)
+	
+	2.3. Mount the USB drive for test and show the already mounted drive
+	> ```
+	> sudo mount /dev/sda1 /media/usb-drive/
+	> ls -l /media
+	> ```
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.3.1.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.3.2.png)
+
+	2.4. Unmount the USB drive to prepare for permanent mount
+	> ```
+	> sudo umount /media/usb-drive/
+	> ls -l /media
+	> ```
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.4.1.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.4.2.png)
+
+	2.5. Mount permanently the USB drive to the /media/usb-drive directory
+	> ```
+	> sudo nano /etc/fstab
+	> /dev/sda1 /media/usb-drive ntfs default,nofail,noatime 0 0
+	> Ctrl + X
+	> Y
+	> Enter
+	> sudo mount -a
+	> ls -l /media
+	> ```
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.5.1.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.5.2.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.5.3.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.5.4.png)
+	> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.2.5.5.png)
+
+3. Edit the Samba config to share the external drive in the network and append the
+> ```
+> sudo nano /etc/samba/smb.conf
+> ```
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.3.1.png)
+>
+> Append the following lines on the end of the smb.conf and save
+> ```
+> [SharedStorage]
+> path = /media/usb-drive
+> browseable = yes
+> writeable = yes
+> public = yes
+> guest ok = yes
+> guest only = no
+> create mask = 0777
+> directory mask = 0777
+> read only = no
+> ```
+> 
+> Restart the samba service
+> ```
+> sudo systemctl restart smbd
+> ```
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.3.2.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/5.3.3.png)
 
 
 ### VI: Install and configure VPN
