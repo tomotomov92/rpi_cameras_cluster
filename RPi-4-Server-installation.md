@@ -97,6 +97,18 @@
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.6.1.png)
 > ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.6.2.png)
 
+7. Enable camera in raspi-config
+> ```
+> sudo raspi-config
+> > 3 Interface Options
+> > P1 Camera
+> > Yes
+> ```
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.7.1.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.7.2.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.7.3.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/3.7.4.png)
+
 
 ### V: Install and configure shared storage
 
@@ -266,4 +278,21 @@ Installing MotionEye using the [guide](https://github.com/ccrisan/motioneye/wiki
 
 ### IX: Configure MotionEye
 
-1. 
+Open the MotionEye software on the RPi4 IP and port 8765. Example: `192.168.0.2:8765`
+
+1. Add local camera and configure it as it is on the RPi 0 W
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.1.1.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.1.2.png)
+> 
+> The only change is the storage of the media files - we are going to store them in `/media/usb-drive/Cameras`
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.1.3.png)
+
+2. Add remote camera
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.2.1.png)
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.2.2.png)
+
+3. View the streaming of the added cameras
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.3.png)
+
+4. Check the created directories and movies
+> ![](https://raw.githubusercontent.com/tomotomov92/rpi_cameras_cluster/main/images/RPi4/9.4.png)
