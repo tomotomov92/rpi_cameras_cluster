@@ -7,7 +7,7 @@ This is an example project on how to build **Raspberry Pi** with the following c
 The project has been made with the idea to create always powered on with low power consumption.
 In order to accomplish this we're going to use Raspberry Pi 4 for server, Raspberry Pi Zero W for the cameras and open software which we can control and manage as we see fit.
 
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xFXzm_FImsw/0.jpg)](https://youtu.be/xFXzm_FImsw)
 
 ## Equipment
 
